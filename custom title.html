@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Default Tab</title>
+    <link rel="icon" href="default_icon.png" id="tabIcon">
+  </head>
+  <body>
+    <h1>Change the Tab Title and Icon</h1>
+    <label for="title">New Tab Title:</label><br>
+    <input type="text" id="title" name="title"><br>
+    <label for="favicon">New Tab Icon (URL):</label><br>
+    <input type="text" id="favicon" name="favicon"><br>
+    <button onclick="changeTabInfo()">Change Tab Info</button>
+
+    <script type="text/javascript">
+      function changeTabInfo() {
+        var title = document.getElementById('title').value;
+        var favicon = document.getElementById('favicon').value;
+
+        document.title = title;
+        document.getElementById('tabIcon').href = favicon;
+      }
+    </script>
+  </body>
+</html>
+<!--James Usher - 2022-->
